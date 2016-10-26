@@ -1,0 +1,4 @@
+This repository includes several open source benchmarks. These benchmarks have their own licenses provided in the source files or project directories.
+
+The JTool tool itself is available under the MIT license given below. The JTool tool includes everything in the `projects/jtool` directory and all files that are not within the `projects` directory (such as the scripts).
+

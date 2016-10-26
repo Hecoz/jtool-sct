@@ -1,0 +1,50 @@
+#!/bin/sh
+#
+# Script to compute Raja's gallery
+#
+# Usage: compute resolution [options]
+#
+# Example: compute "256x192" --antialias 4
+#
+
+
+# Set image files extension (codec)
+img_ext="png"
+
+
+resolution=$1
+shift
+
+if [ -z $resolution ]; then
+    echo "Usage: compute resolution [options]";
+    exit 1;
+fi
+
+compute="../bin/raja -v -p txt -r $resolution -d20 $*"
+
+date
+cat <<EOF
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+             Computing Raja's gallery ($resolution).
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+EOF
+
+DATA_FILES=`find . -name '*.raj' | sed -e 's/.\///' | sed -e 's/.raj//' | sort`
+
+for i in ${DATA_FILES} ;
+    do
+        echo '*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*'
+	echo "$i :: " ;
+        ${compute} -o "$i"-${resolution}.${img_ext} "$i".raj
+        echo '*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*'
+	echo ;
+	echo ;
+    done
+
+date
+cat <<EOF
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      Computation of Raja's gallery ($resolution) finished.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

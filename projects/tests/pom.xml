@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jtool</groupId>
+	<artifactId>tests</artifactId>
+	<version>1</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.jtool</groupId>
+			<artifactId>jtool-runtime</artifactId>
+			<version>0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jtool</groupId>
+			<artifactId>testinterface</artifactId>
+			<version>1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+                    <argLine>
+                        -Xbootclasspath/p:${settings.localRepository}/org/jtool/local/rt/1/rt-1.jar -javaagent:${settings.localRepository}/org/jtool/jtool-runtime/0.1/jtool-runtime-0.1.jar 
+                    </argLine>
+                    <!--  <useSystemClassloader>true</useSystemClassloader> -->
+                </configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

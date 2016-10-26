@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jtool</groupId>
+  <artifactId>runparent</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>../elevator</module>
+  	<module>../jgf-bench-s2</module>
+  	<module>../philo</module>
+  	<module>../runbenchmarks</module>
+  	<module>../sor</module>
+  	<module>../tsp</module>
+  	<module>../prodcons</module>
+  	<module>../alarmclock</module>
+  	<module>../cache4j</module>
+  	<module>../cocome</module>
+  	<module>../credemo</module>
+  	<module>../daisyfs</module>
+  	<module>../jgf-raytracer</module>
+  	<module>../linkedlist</module>
+  	<module>../papabench</module>
+  	<module>../pjcd</module>
+  	<module>../raxextended</module>
+  	<module>../repworkers</module>
+  	<module>../stringutilsbug</module>
+  	<module>../testinterface</module>
+  	<module>../tests</module>
+  	<module>../jtool</module>
+  	<module>../rhino_src_1</module>
+  	<module>../rhino_src_2</module>
+  	<module>../rhino_src_3</module>
+  	<module>../account</module>
+  	<module>../accountsubtype</module>
+  	<module>../airline</module>
+  	<module>../allocatevector</module>
+  	
+  	<module>../boundedbuffer</module>
+  	<module>../clean</module>
+  	<module>../colt</module>
+  	<module>../deadlock1</module>
+  	<module>../deadlock2</module>
+  	<module>../deos</module>
+  	<module>../diningphil</module>
+  	
+  	<module>../jgf-bench-s1</module>
+  	<module>../jgf-bench-s3</module>
+  	<module>../losenotify</module>
+  	<module>../nestedmonitor</module>
+  	<module>../piper</module>
+  	
+  	<module>../raxextendedenvfirst</module>
+  	<module>../readerswriters</module>
+  	<module>../reorder</module>
+  	<module>../sleepingbarber</module>
+  	<module>../stringbuffer</module>
+  	<module>../stringbuffer2</module>
+  	<module>../twostage</module>
+  	<module>../wronglock</module>
+  </modules>
+</project>

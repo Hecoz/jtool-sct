@@ -1,0 +1,174 @@
+raja.renderer.Scene {
+        world = raja.renderer.World {
+                solid = raja.shape.Aggregate {
+                        solids = [
+                                raja.shape.BasicSolid {
+                                        texturedForm = raja.shape.BasicTexturedForm {
+                                                form = raja.shape.Sphere {
+                                                        center = raja.Point3D { 150.0 ; -50.0 ; 30.0 }
+                                                        radius = 20.0
+                                                }
+                                                texture = raja.shape.PlainTexture (@raja.shape.PlainTexture_7eeafb12) {
+                                                        localTexture = raja.shape.LocalTexture {
+                                                                kd = raja.RGB (@raja.RGB_47f6fb12) { 0.0 ; 0.0 ; 0.0 }
+                                                                krl = raja.RGB { 0.5 ; 0.5 ; 0.5 }
+                                                                krg = @raja.RGB_47f6fb12
+                                                                ktl = raja.RGB { 0.0 ; 0.0 ; 0.0 }
+                                                                ktg = raja.RGB { 0.9 ; 0.9 ; 0.9 }
+                                                                ns = 50
+                                                                nt = 1
+                                                        }
+                                                }
+                                        }
+                                        volume = raja.shape.IsotropicVolume { 1.5 }
+                                },
+                                raja.shape.BasicSolid {
+                                        texturedForm = raja.shape.Intersection {
+                                                texturedForms = [
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 150.0 ; 50.0 ; 45.0 }
+                                                                        normal = raja.Vector3D { 0.0 ; 0.0 ; 1.0 }
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_7eeafb12
+                                                        },
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 150.0 ; 50.0 ; 15.0 }
+                                                                        normal = raja.Vector3D { 0.0 ; 0.0 ; -1.0 }
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_7eeafb12
+                                                        },
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 150.0 ; 35.0 ; 30.0 }
+                                                                        normal = raja.Vector3D { 0.0 ; -1.0 ; 0.0 }
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_7eeafb12
+                                                        },
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 150.0 ; 65.0 ; 30.0 }
+                                                                        normal = raja.Vector3D { 0.0 ; 1.0 ; 0.0 }
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_7eeafb12
+                                                        },
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 135.0 ; 50.0 ; 30.0 }
+                                                                        normal = raja.Vector3D { -1.0 ; 0.0 ; 0.0 }
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_7eeafb12
+                                                        },
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 165.0 ; 50.0 ; 30.0 }
+                                                                        normal = raja.Vector3D { 1.0 ; 0.0 ; 0.0 }
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_7eeafb12
+                                                        }
+                                                ]
+                                        }
+                                        volume = raja.shape.IsotropicVolume { 1.5 }
+                                },
+                                raja.shape.BasicSolid {
+                                        texturedForm = raja.shape.Intersection {
+                                                texturedForms = [
+                                                        raja.shape.BasicTexturedForm (@raja.shape.BasicTexturedForm_5796fb12) {
+                                                                form = raja.shape.Plane {
+                                                                        origin = raja.Point3D { 0.0 ; 0.0 ; 0.0 }
+                                                                        normal = raja.Vector3D { 0.0 ; 0.0 ; 1.0 }
+                                                                }
+                                                                texture = raja.test.DamierTexture {
+                                                                        kdUn = raja.RGB (@raja.RGB_bdaafb12) { 1.0 ; 1.0 ; 1.0 }
+                                                                        kdDeux = @raja.RGB_47f6fb12
+                                                                        kr = @raja.RGB_47f6fb12
+                                                                        kt = @raja.RGB_47f6fb12
+                                                                        ns = 1
+                                                                        nt = 1
+                                                                        step = 10.0
+                                                                        x = 10.0
+                                                                        y = 0.0
+                                                                }
+                                                        },
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Cylinder {
+                                                                        origin = raja.Point3D { 150.0 ; -50.0 ; 20.0 }
+                                                                        direction = raja.Vector3D { 0.0 ; 0.0 ; 1.0 }
+                                                                        radius = 38.0
+                                                                }
+                                                                texture = raja.shape.PlainTexture (@raja.shape.PlainTexture_251afb12) {
+                                                                        localTexture = raja.shape.LocalTexture {
+                                                                                kd = raja.RGB { 0.08000000000000002 ; 0.32000000000000006 ; 0.08000000000000002 }
+                                                                                krl = raja.RGB (@raja.RGB_252efb12) { 0.2 ; 0.2 ; 0.2 }
+                                                                                krg = @raja.RGB_252efb12
+                                                                                ktl = raja.RGB (@raja.RGB_252afb12) { 0.0 ; 0.0 ; 0.0 }
+                                                                                ktg = @raja.RGB_252afb12
+                                                                                ns = 100
+                                                                                nt = 0
+                                                                        }
+                                                                }
+                                                        }
+                                                ]
+                                        }
+                                        volume = raja.shape.IsotropicVolume { 0.0 }
+                                },
+                                raja.shape.BasicSolid {
+                                        texturedForm = raja.shape.Intersection {
+                                                texturedForms = [
+                                                        @raja.shape.BasicTexturedForm_5796fb12,
+                                                        raja.shape.BasicTexturedForm {
+                                                                form = raja.shape.Cylinder {
+                                                                        origin = raja.Point3D { 150.0 ; 50.0 ; 20.0 }
+                                                                        direction = raja.Vector3D { 0.0 ; 0.0 ; 1.0 }
+                                                                        radius = 38.0
+                                                                }
+                                                                texture = @raja.shape.PlainTexture_251afb12
+                                                        }
+                                                ]
+                                        }
+                                        volume = raja.shape.IsotropicVolume { 0.0 }
+                                },
+                                raja.shape.BasicSolid {
+                                        texturedForm = raja.shape.BasicTexturedForm {
+                                                form = raja.shape.Plane {
+                                                        origin = raja.Point3D { 0.0 ; 0.0 ; -100.0 }
+                                                        normal = raja.Vector3D { 0.0 ; 0.0 ; 1.0 }
+                                                }
+                                                texture = raja.test.DamierTexture {
+                                                        kdUn = raja.RGB { 0.15 ; 0.36 ; 0.6 }
+                                                        kdDeux = @raja.RGB_bdaafb12
+                                                        kr = @raja.RGB_47f6fb12
+                                                        kt = @raja.RGB_47f6fb12
+                                                        ns = 1
+                                                        nt = 1
+                                                        step = 50.0
+                                                        x = 30.0
+                                                        y = 0.0
+                                                }
+                                        }
+                                        volume = raja.shape.IsotropicVolume { 0.0 }
+                                }
+                        ]
+                        priorities = [[
+                        ]]
+                }
+                lights = [
+                        raja.light.DirectionalLightSource {
+                                direction = raja.Vector3D { 1.0 ; 0.0 ; -0.5 }
+                                light = @raja.RGB_bdaafb12
+                        }
+                ]
+                backgroundLight = raja.RGB { 0.4 ; 0.6 ; 1.0 }
+                ambiantLight = raja.RGB { 0.3 ; 0.3 ; 0.3 }
+                ambiantVolume = raja.shape.IsotropicVolume { 1.0 }
+        }
+
+        camera = raja.renderer.HorizontalCamera {
+                origin = raja.Point3D { 0.0 ; 0.0 ; 130.0 }
+                direction = raja.Vector3D { 0.7071067811865475 ; 0.0 ; -0.7071067811865475 }
+                focal = 1.8
+                screenWidth = 2.0
+                screenHeight = 1.5
+        }
+}
